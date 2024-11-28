@@ -40,5 +40,5 @@ export function useResetTableReactive<T extends object>(
     Object.keys(state).forEach(key => delete state[key as keyof T]);
     Object.assign(state, clone(value));
   };
-  return [state, reset];
+  return [state, reset] as const;
 }
