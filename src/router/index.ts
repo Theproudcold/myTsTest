@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router"
 
 // 每个路由都需要映射到一个组件。
 const routes = [
-  { path: '/', component: HomeVue },
+  { path: '/', component: () => import('../components/ComponentReset.vue')  },
 ]
 
 // 创建路由实例并传递 `routes` 配置
